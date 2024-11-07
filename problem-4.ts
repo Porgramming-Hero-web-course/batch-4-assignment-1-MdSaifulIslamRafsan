@@ -9,22 +9,26 @@
         width: number;
         height: number;
     }
-    const calculateShapeArea = (area : circleAreaType | rectangleAreaType) : number | undefined   =>{
+    const calculateShapeArea = (area : circleAreaType | rectangleAreaType) : number   =>{
         if(area.shape === "circle"){
             const circleArea = Math.PI * area.radius * area.radius;
-          return parseFloat(circleArea.toFixed(2));
+            const result = parseFloat(circleArea.toFixed(2))
+            // console.log(result)
+          return  result;
         }
-        if(area.shape === "rectangle"){
+        else if(area.shape === "rectangle"){
             const rectangleArea = area.width * area.height;
+            // console.log(rectangleArea)
             return rectangleArea;
         }
+        return 0;
     }
-    const circleArea : number | undefined = calculateShapeArea({ shape: "circle", radius: 5 });
-    console.log(circleArea);
-    const rectangleArea : number | undefined  = calculateShapeArea({
+    const circleArea : number = calculateShapeArea({ shape: "circle", radius: 5 });
+    console.log(circleArea)
+    const rectangleArea : number   = calculateShapeArea({
         shape: "rectangle",
-        width: 4,
-        height: 6,
+        width: 6,
+        height: 8,
       });
-      console.log(rectangleArea);
+      console.log(rectangleArea)
 }
