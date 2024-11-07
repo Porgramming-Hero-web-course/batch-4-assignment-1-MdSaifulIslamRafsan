@@ -13,12 +13,10 @@
         if(area.shape === "circle"){
             const circleArea = Math.PI * area.radius * area.radius;
             const result = parseFloat(circleArea.toFixed(2))
-            // console.log(result)
-          return  result;
+            return  result;
         }
         else if(area.shape === "rectangle"){
             const rectangleArea = area.width * area.height;
-            // console.log(rectangleArea)
             return rectangleArea;
         }
         return 0;
